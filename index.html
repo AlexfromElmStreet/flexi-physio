@@ -11,15 +11,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand) */
+    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
     html {
-        scroll-padding-top: 170px; 
+        scroll-padding-top: 180px; 
     }
 
-    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand) */
+    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
     @media (min-width: 992px) {
         html {
-            scroll-padding-top: 250px; 
+            scroll-padding-top: 260px; 
         }
     }
 
@@ -297,9 +297,8 @@
 	  <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
     </div>
   </header>
-<div id="about"></div>
 
-  <section  class="py-5">
+  <section id="about" class="py-5">
     <div class="container text-center">
       <img src="https://via.placeholder.com/200" alt="Foto Elias Dobrowolski" class="profile-img mb-3 rounded-circle">
       <h2>Elias Dobrowolski</h2>
