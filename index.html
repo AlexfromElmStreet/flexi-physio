@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Базовый scroll-padding-top для мобильных устройств (высота навигации + внутренний отступ секции) */
+    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand) */
     html {
         scroll-padding-top: 170px; 
     }
 
-    /* Адаптация scroll-padding-top для десктопных устройств (высота навигации + внутренний отступ секции) */
+    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand) */
     @media (min-width: 992px) {
         html {
             scroll-padding-top: 250px; 
@@ -24,27 +24,27 @@
     }
 
     body {
-      background-color: #f0f8ff; /* Очень светло-голубой фон (AliceBlue) */
+      background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
     .hero {
       background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Image2.jpeg') center/cover no-repeat;
       height: 70vh;
       display: flex;
-      flex-direction: column; /* Изменяем на колонку для центрирования содержимого */
+      flex-direction: column; /* Ändern in Spalte zur Zentrierung des Inhalts */
       align-items: center;
       justify-content: center;
-      text-align: center; /* Центрируем текст внутри */
+      text-align: center; /* Text zentrieren */
     }
-    .hero h1, .hero p { /* Применяем стили к h1 и p внутри hero */
-      font-family: 'Montserrat', sans-serif; /* Применяем шрифт Montserrat */
-      color: white; /* Цвет текста белый */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Мягкая черная тень для объема */
+    .hero h1, .hero p { /* Stile auf h1 und p innerhalb von hero anwenden */
+      font-family: 'Montserrat', sans-serif; /* Montserrat-Schriftart anwenden */
+      color: white; /* Textfarbe weiß */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Weicher schwarzer Schatten für Volumen */
     }
     .hero h1 {
-        font-weight: 700; /* Жирный для заголовка */
+        font-weight: 700; /* Fett für die Überschrift */
     }
     .hero p {
-        font-weight: 400; /* Нормальный для абзаца */
+        font-weight: 400; /* Normal für den Absatz */
     }
 
     .profile-img {
@@ -63,48 +63,48 @@
       border-radius: 10px;
       margin-top: 30px;
     }
-    /* Стиль для иконки WhatsApp, чтобы она была немного больше и выделялась */
+    /* Stil für die WhatsApp-Ikone, damit sie etwas größer ist und hervorsticht */
     .whatsapp-icon {
-      font-size: 1.2em; /* Немного увеличить размер */
-      margin-right: 5px; /* Отступ справа от текста */
-      color: #25D366; /* Цвет WhatsApp */
+      font-size: 1.2em; /* Größe leicht erhöhen */
+      margin-right: 5px; /* Abstand rechts vom Text */
+      color: #25D366; /* WhatsApp-Farbe */
     }
-    .contact-icon { /* Новый стиль для иконок контактов */
+    .contact-icon { /* Neuer Stil für Kontaktsymbole */
       font-size: 1.2em;
       margin-right: 5px;
-      color: #007bff; /* Цвет для иконок */
+      color: #007bff; /* Farbe für Symbole */
     }
-    /* Стиль для ссылок, чтобы они по умолчанию не были подчеркнуты */
+    /* Stil für Links, damit sie standardmäßig nicht unterstrichen sind */
     .contact-link {
         text-decoration: none;
-        color: inherit; /* Наследовать цвет текста от родителя */
+        color: inherit; /* Textfarbe vom Eltern-Element erben */
     }
     .contact-link:hover {
-        text-decoration: underline; /* Подчеркивать при наведении */
+        text-decoration: underline; /* Beim Hover unterstreichen */
     }
-    /* Сброс стандартного стиля .navbar-brand - удалены пользовательские стили рамки */
+    /* Standardstil .navbar-brand zurücksetzen - benutzerdefinierte Rahmenstile entfernt */
     .navbar-brand {
-      /* Ранее добавленные стили, такие как color: white !important; и text-shadow были удалены */
-      /* Позвольте Bootstrap управлять этим или определите свой собственный цвет без рамки */
+      /* Zuvor hinzugefügte Stile wie color: white !important; und text-shadow wurden entfernt */
+      /* Bootstrap dies verwalten lassen oder eigene Farbe ohne Rahmen definieren */
     }
-    /* Стиль для логотипа в навигационной панели */
+    /* Stil für das Logo in der Navigationsleiste */
     .navbar-logo {
-        height: 144px; /* Увеличено в 2 раза */
-        width: 120px; /* Увеличено в 2 раза */
+        height: 144px; /* Verdoppelt */
+        width: 120px; /* Verdoppelt */
         border: 4px solid #007bff;
         padding: 2px;
         object-fit: cover;
     }
 
-    /* Изменяет navbar-collapse для переноса элементов */
-    /* 'display: flex;' здесь удален, чтобы избежать конфликтов с логикой Bootstrap для .collapse/.show */
+    /* Ändert navbar-collapse zum Umbrechen von Elementen */
+    /* 'display: flex;' hier entfernt, um Konflikte mit der Bootstrap-Logik für .collapse/.show zu vermeiden */
     .navbar-collapse { 
       flex-wrap: wrap;
       justify-content: flex-end;
       align-items: center;
     }
 
-    /* На больших экранах: ссылки справа, логотип ниже справа */
+    /* Auf großen Bildschirmen: Links rechts, Logo unten rechts */
     @media (min-width: 992px) {
         .navbar-collapse .navbar-nav {
             margin-left: auto !important;
@@ -123,9 +123,9 @@
         }
     }
 
-    /* На мобильных экранах: ссылки и логотип центрированы в колонке */
+    /* Auf mobilen Bildschirmen: Links und Logo in einer Spalte zentriert */
     @media (max-width: 991.98px) {
-      .navbar-collapse { /* Bootstrap добавляет класс .show, чтобы сделать его видимым */
+      .navbar-collapse { /* Bootstrap fügt die Klasse .show hinzu, um es sichtbar zu machen */
         flex-direction: column;
         align-items: center;
       }
@@ -140,14 +140,14 @@
         padding: 0;
       }
       .navbar-collapse .navbar-logo {
-        height: 108px; /* Увеличено в 2 раза */
-        width: 90px; /* Увеличено в 2 раза */
+        height: 108px; /* Verdoppelt */
+        width: 90px; /* Verdoppelt */
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
       }
     }
-    /* Стиль для раздела "Обо мне" */
+    /* Stil für den Abschnitt "Über mich" */
     #about .container {
         text-align: center;
     }
@@ -167,25 +167,25 @@
         margin-right: auto;
         margin-bottom: 1em;
     }
-    /* Конкретный стиль для списков в разделе "Обо мне" для квалификаций */
+    /* Spezifischer Stil für Listen im Abschnitt "Über mich" für Qualifikationen */
     #about ul {
         font-family: 'Montserrat', sans-serif;
-        list-style-type: disc; /* Маркеры */
+        list-style-type: disc; /* Aufzählungszeichen */
         text-align: left;
         max-width: 800px;
-        margin-left: auto; /* Центрирование ul */
+        margin-left: auto; /* ul zentrieren */
         margin-right: auto;
-        padding-left: 20px; /* Отступ для маркеров */
+        padding-left: 20px; /* Einzug für Aufzählungszeichen */
         margin-top: 10px;
         margin-bottom: 10px;
     }
     #about ul li {
-        margin-bottom: 5px; /* Расстояние между элементами списка */
+        margin-bottom: 5px; /* Abstand zwischen Listenelementen */
     }
-    .slogan-text { /* Слоган в конце раздела "Обо мне" */
+    .slogan-text { /* Slogan am Ende des Abschnitts "Über mich" */
         font-family: 'Montserrat', sans-serif;
-        font-weight: 700; /* Жирный */
-        text-align: center; /* Центрированный */
+        font-weight: 700; /* Fett */
+        text-align: center; /* Zentriert */
         font-size: 1.3em;
         margin-top: 25px;
         margin-bottom: 25px;
@@ -195,7 +195,7 @@
         margin-right: auto;
     }
 
-    /* Стиль для раздела "Прайс-лист" */
+    /* Stil für den Abschnitt "Preisliste" */
     #preisliste h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -213,8 +213,8 @@
     }
     #preisliste table {
       width: 100%;
-      max-width: 600px; /* Ограничивает ширину таблицы для лучшей читаемости */
-      margin: 0 auto; /* Центрирует таблицу */
+      max-width: 600px; /* Begrenzt die Tabellenbreite für bessere Lesbarkeit */
+      margin: 0 auto; /* Tabelle zentrieren */
       border-collapse: collapse;
       margin-top: 1.5rem;
       font-family: 'Montserrat', sans-serif;
@@ -237,12 +237,12 @@
       color: #555;
     }
 
-    /* Стиль для раздела "Выходные данные" */
+    /* Stil für den Abschnitt "Impressum" */
     #impressum {
-        background-color: #f8f9fa; /* Легкий фон, чтобы выделить */
+        background-color: #f8f9fa; /* Leichter Hintergrund zur Hervorhebung */
     }
     #impressum .container {
-        max-width: 800px; /* Ограниченная ширина для читаемости */
+        max-width: 800px; /* Begrenzte Breite für Lesbarkeit */
     }
     #impressum h2 {
         font-family: 'Montserrat', sans-serif;
@@ -258,10 +258,10 @@
     #impressum strong {
         font-weight: 700;
     }
-    /* Стиль для модального окна Cookie (опционально, для дополнительного отступа/выравнивания) */
+    /* Stil für das Cookie-Zustimmungs-Modal (optional, für zusätzlichen Abstand/Ausrichtung) */
     .cookie-modal-footer {
         justify-content: center;
-        border-top: none; /* Удаляет верхнюю линию в футере модального окна */
+        border-top: none; /* Entfernt die obere Linie im Modal-Footer */
     }
   </style>
 </head>
@@ -297,8 +297,9 @@
 	  <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
     </div>
   </header>
+<div id="about"></div>
 
-  <section id="about" class="py-5">
+  <section  class="py-5">
     <div class="container text-center">
       <img src="https://via.placeholder.com/200" alt="Foto Elias Dobrowolski" class="profile-img mb-3 rounded-circle">
       <h2>Elias Dobrowolski</h2>
@@ -383,12 +384,12 @@
             <td>90 €</td>
           </tr>
           <tr>
-            <td>Leistungsdiagnostik (для спортсменов и атлетов)</td>
+            <td>Leistungsdiagnostik (für Sportler & Athleten)</td>
             <td>110 €</td>
           </tr>
         </tbody>
       </table>
-      <p class="price-list-footer">* вкл. приезд в пределах Гамбурга</p>
+      <p class="price-list-footer">* inkl. Anfahrt innerhalb Hamburg</p>
     </div>
   </section>
 
@@ -461,42 +462,42 @@
       const cookieConsentModal = new bootstrap.Modal(document.getElementById('cookieConsentModal'));
       const acceptCookiesBtn = document.getElementById('acceptCookies');
       
-      // Проверяем, было ли уже дано согласие на использование файлов cookie
+      // Überprüfen, ob die Cookie-Zustimmung bereits erteilt wurde
       if (!localStorage.getItem('cookieConsentGiven')) {
-        cookieConsentModal.show(); // Показываем модальное окно, если согласия нет
+        cookieConsentModal.show(); // Zeigen Sie das Modal an, wenn keine Zustimmung vorliegt
       }
 
-      // При клике на "Принять" сохраняем согласие и закрываем модальное окно
+      // Beim Klick auf "Zustimmen" die Zustimmung speichern und das Modal schließen
       acceptCookiesBtn.addEventListener('click', function() {
         localStorage.setItem('cookieConsentGiven', 'true');
         cookieConsentModal.hide();
       });
 
-      // Логика для плавного скролла после клика по ссылке навигации
+      // Logik für sanftes Scrollen nach Klick auf Navigationslink
       const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
       navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-          // Проверяем, является ли ссылка внутренним якорем
+          // Überprüfen, ob der Link ein interner Anker ist
           if (this.hash !== "") {
-            event.preventDefault(); // Предотвращаем стандартное поведение прыжка
+            event.preventDefault(); // Standard-Sprungverhalten verhindern
 
             const targetId = this.hash;
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-              // Плавный скролл к целевому разделу
+              // Sanftes Scrollen zum Zielabschnitt
               targetElement.scrollIntoView({
                 behavior: 'smooth'
               });
 
-              // Вручную закрываем навигационную панель, если она открыта (на мобильных устройствах)
+              // Navigationsleiste manuell schließen, wenn sie geöffnet ist (auf mobilen Geräten)
               const navbarCollapse = document.getElementById('navbarNav');
-              // Получаем экземпляр Bootstrap Collapse
+              // Bootstrap Collapse Instanz abrufen
               const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); 
 
               if (bsCollapse && navbarCollapse.classList.contains('show')) {
-                bsCollapse.hide(); // Скрываем навигационную панель
+                bsCollapse.hide(); // Navigationsleiste ausblenden
               }
             }
           }
