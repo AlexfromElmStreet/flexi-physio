@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Добавляем scroll-padding-top для компенсации фиксированной навигационной панели */
+    html {
+        scroll-padding-top: 180px; /* Высота вашей фиксированной навигации */
+    }
+
     body {
       background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
@@ -478,13 +483,13 @@
                 behavior: 'smooth'
               });
 
-              // Navigationsleiste manuell schließen, wenn sie geöffnet ist (auf Mobilgeräten)
+              // Navigationsleiste manuell schließen, если она открыта (на мобильных устройствах)
               const navbarCollapse = document.getElementById('navbarNav');
-              // Bootstrap Collapse-Instanz erhalten
+              // Получить экземпляр Bootstrap Collapse
               const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); 
 
               if (bsCollapse && navbarCollapse.classList.contains('show')) {
-                bsCollapse.hide(); // Navigationsleiste ausblenden
+                bsCollapse.hide(); // Скрыть навигационную панель
               }
             }
           }
