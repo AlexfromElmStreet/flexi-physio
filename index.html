@@ -18,7 +18,7 @@
       background: url('https://cdn.pixabay.com/photo/2016/11/21/13/49/massage-1841145_1280.jpg') center/cover no-repeat;
       height: 70vh;
       display: flex;
-      flex-direction: column; /* Ändert zu Spalte für Inhaltszentrierung */
+      flex-direction: column; /* Изменяем на колонку для центрирования содержимого */
       align-items: center;
       justify-content: center;
       text-align: center; /* Zentriert den Text im Inneren */
@@ -84,7 +84,7 @@
         object-fit: cover;
     }
 
-    /* Ändert navbar-collapse für Elementumbrüche */
+    /* Ändert navbar-collapse для Elementumbrüche */
     /* Убрано 'display: flex;' отсюда, чтобы не конфликтовать с логикой Bootstrap'а для .collapse/.show */
     .navbar-collapse { 
       flex-wrap: wrap;
@@ -264,10 +264,10 @@
       
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
-          <li class="nav-item"><a class="nav-link" href="#preisliste">Preisliste</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact-info">Kontakt</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">Über mich</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-bs-toggle="collapse" data-bs-target="#navbarNav">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#preisliste" data-bs-toggle="collapse" data-bs-target="#navbarNav">Preisliste</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-info" data-bs-toggle="collapse" data-bs-target="#navbarNav">Kontakt</a></li>
         </ul>
         <div class="navbar-logo-wrapper">
             <a href="#" class="nav-link p-0">
