@@ -1,515 +1,531 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Physiotherapie Elias Dobrowolski | Ihr Physiotherapeut in Hamburg</title>
-  <meta name="description" content="Mobile Physiotherapie in Hamburg von Elias Dobrowolski. Professionelle Hausbesuche: Manuelle Therapie, Lymphdrainage, medizinische Massage.">
-  <meta name="keywords" content="Physiotherapie, mobiler Physiotherapeut, Hamburg, manuelle Therapie, Lymphdrainage, medizinische Massage, Hausbesuche, Elias Dobrowolski, Genesung, Rehabilitation">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Der scroll-padding-top wird nun über JavaScript dynamisch gesteuert, um die Genauigkeit zu verbessern. */
-    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
-    /* html {
-        scroll-padding-top: 180px; 
-    } */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Physiotherapie in Hamburg: Elias Dobrowolski | Hausbesuche, Manuelle Therapie</title>
+  
+    <meta name="description" content="Mobile Physiotherapie in Hamburg von Elias Dobrowolski. Wir bieten professionelle Hausbesuche für manuelle Therapie, medizinische Massagen und Lymphdrainage. Ihr Weg zu Genesung und Schmerzfreiheit.">
+  
+    <meta name="keywords" content="Physiotherapie Hamburg, mobiler Physiotherapeut Hamburg, Hausbesuche, Manuelle Therapie, Lymphdrainage, medizinische Massage, Elias Dobrowolski, Physiotherapie Hausbesuch, Sportphysiotherapie Hamburg, Physiotherapie in Hamburg">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Der scroll-padding-top wird nun über JavaScript dynamisch gesteuert, um die Genauigkeit zu verbessern. */
+    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
+    /* html {
+        scroll-padding-top: 180px; 
+    } */
 
-    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
-    /* @media (min-width: 992px) {
-        html {
-            scroll-padding-top: 260px; 
-        }
-    } */
+    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
+    /* @media (min-width: 992px) {
+        html {
+            scroll-padding-top: 260px; 
+        }
+    } */
 
-    body {
-      background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
-    }
-    .hero {
-      background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Image2.jpeg') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      flex-direction: column; /* Ändern in Spalte zur Zentrierung des Inhalts */
-      align-items: center;
-      justify-content: center;
-      text-align: center; /* Text zentrieren */
-    }
-    .hero h1, .hero p { /* Stile auf h1 und p innerhalb von hero anwenden */
-      font-family: 'Montserrat', sans-serif; /* Montserrat-Schriftart anwenden */
-      color: white; /* Textfarbe weiß */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Weicher schwarzer Schatten für Volumen */
-    }
-    .hero h1 {
-        font-weight: 700; /* Fett für die Überschrift */
-    }
-    .hero p {
-        font-weight: 400; /* Normal für den Absatz */
-    }
+    body {
+      background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
+    }
+    .hero {
+      background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Image2.jpeg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      flex-direction: column; /* Ändern in Spalte zur Zentrierung des Inhalts */
+      align-items: center;
+      justify-content: center;
+      text-align: center; /* Text zentrieren */
+    }
+    .hero h1, .hero p { /* Stile auf h1 und p innerhalb von hero anwenden */
+      font-family: 'Montserrat', sans-serif; /* Montserrat-Schriftart anwenden */
+      color: white; /* Textfarbe weiß */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Weicher schwarzer Schatten für Volumen */
+    }
+    .hero h1 {
+        font-weight: 700; /* Fett für die Überschrift */
+    }
+    .hero p {
+        font-weight: 400; /* Normal für den Absatz */
+    }
 
-    .profile-img {
-      max-width: 200px;
-      border-radius: 50%;
-    }
-    .cta-button {
-      margin-top: 2rem;
-      transition: transform 0.3s ease-in-out;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-    }
-    .massage-img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-    /* Stil für die WhatsApp-Ikone, damit sie etwas größer ist und hervorsticht */
-    .whatsapp-icon {
-      font-size: 1.2em; /* Größe leicht erhöhen */
-      margin-right: 5px; /* Abstand rechts vom Text */
-      color: #25D366; /* WhatsApp-Farbe */
-    }
-    .contact-icon { /* Neuer Stil für Kontaktsymbole */
-      font-size: 1.2em;
-      margin-right: 5px;
-      color: #007bff; /* Farbe für Symbole */
-    }
-    /* Stil für Links, damit sie standardmäßig nicht unterstrichen sind */
-    .contact-link {
-        text-decoration: none;
-        color: inherit; /* Textfarbe vom Eltern-Element erben */
-    }
-    .contact-link:hover {
-        text-decoration: underline; /* Beim Hover unterstreichen */
-    }
-    /* Standardstil .navbar-brand zurücksetzen - benutzerdefinierte Rahmenstile entfernt */
-    .navbar-brand {
-      /* Zuvor hinzugefügte Stile wie color: white !important; und text-shadow wurden entfernt */
-      /* Bootstrap dies verwalten lassen oder eigene Farbe ohne Rahmen definieren */
-    }
-    /* Stil für das Logo in der Navigationsleiste */
-    .navbar-logo {
-        height: 144px; /* Verdoppelt */
-        width: 120px; /* Verdoppelt */
-        border: 4px solid #007bff;
-        padding: 2px;
-        object-fit: cover;
-    }
+    .profile-img {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    .cta-button {
+      margin-top: 2rem;
+      transition: transform 0.3s ease-in-out;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+    .massage-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    /* Stil für die WhatsApp-Ikone, damit sie etwas größer ist und hervorsticht */
+    .whatsapp-icon {
+      font-size: 1.2em; /* Größe leicht erhöhen */
+      margin-right: 5px; /* Abstand rechts vom Text */
+      color: #25D366; /* WhatsApp-Farbe */
+    }
+    .contact-icon { /* Neuer Stil für Kontaktsymbole */
+      font-size: 1.2em;
+      margin-right: 5px;
+      color: #007bff; /* Farbe für Symbole */
+    }
+    /* Stil für Links, damit sie standardmäßig nicht unterstrichen sind */
+    .contact-link {
+        text-decoration: none;
+        color: inherit; /* Textfarbe vom Eltern-Element erben */
+    }
+    .contact-link:hover {
+        text-decoration: underline; /* Beim Hover unterstreichen */
+    }
+    /* Standardstil .navbar-brand zurücksetzen - benutzerdefinierte Rahmenstile entfernt */
+    .navbar-brand {
+      /* Zuvor hinzugefügte Stile wie color: white !important; und text-shadow wurden entfernt */
+      /* Bootstrap dies verwalten lassen oder eigene Farbe ohne Rahmen definieren */
+    }
+    /* Stil für das Logo in der Navigationsleiste */
+    .navbar-logo {
+        height: 144px; /* Verdoppelt */
+        width: 120px; /* Verdoppelt */
+        border: 4px solid #007bff;
+        padding: 2px;
+        object-fit: cover;
+    }
 
-    /* Ändert navbar-collapse zum Umbrechen von Elementen */
-    /* 'display: flex;' hier entfernt, um Konflikte mit der Bootstrap-Logik für .collapse/.show zu vermeiden */
-    .navbar-collapse { 
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: center;
-    }
+    /* Ändert navbar-collapse zum Umbrechen von Elementen */
+    /* 'display: flex;' hier entfernt, um Konflikte mit der Bootstrap-Logik für .collapse/.show zu vermeiden */
+    .navbar-collapse { 
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-    /* Auf großen Bildschirmen: Links rechts, Logo unten rechts */
-    @media (min-width: 992px) {
-        .navbar-collapse .navbar-nav {
-            margin-left: auto !important;
-            width: auto;
-        }
-        .navbar-collapse .navbar-logo-wrapper {
-            width: 100%;
-            text-align: right;
-            padding-right: 0.5rem;
-            padding-left: 0.5rem;
-        }
-        .navbar-collapse .navbar-logo {
-            margin-top: 10px;
-            margin-left: auto;
-            margin-right: 0;
-        }
-    }
+    /* Auf großen Bildschirmen: Links rechts, Logo unten rechts */
+    @media (min-width: 992px) {
+        .navbar-collapse .navbar-nav {
+            margin-left: auto !important;
+            width: auto;
+        }
+        .navbar-collapse .navbar-logo-wrapper {
+            width: 100%;
+            text-align: right;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        .navbar-collapse .navbar-logo {
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
 
-    /* Auf mobilen Bildschirmen: Links und Logo in einer Spalte zentriert */
-    @media (max-width: 991.98px) {
-      .navbar-collapse { /* Bootstrap fügt die Klasse .show hinzu, um es sichtbar zu machen */
-        flex-direction: column;
-        align-items: center;
-      }
-      .navbar-collapse .navbar-nav {
-        width: 100%;
-        justify-content: center;
-        margin-left: 0 !important;
-      }
-      .navbar-collapse .navbar-logo-wrapper {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-      }
-      .navbar-collapse .navbar-logo {
-        height: 108px; /* Verdoppelt */
-        width: 90px; /* Verdoppelt */
-        margin-top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    /* Stil für den Abschnitt "Über mich" */
-    #about .container {
-        text-align: center;
-    }
-    #about h2 {
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 800px;
-        /* ДОБАВЛЕНО/ИЗМЕНЕНО: Убираем верхний отступ, чтобы h2 поднялся вверх */
-        margin-top: 0; 
-    }
-    #about p {
-        font-family: 'Montserrat', sans-serif;
-        line-height: 1.6;
-        text-align: left;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1em;
-    }
-    /* Spezifischer Stil für Listen im Abschnitt "Über mich" für Qualifikationen */
-    #about ul {
-        font-family: 'Montserrat', sans-serif;
-        list-style-type: disc; /* Aufzählungszeichen */
-        text-align: left;
-        max-width: 800px;
-        margin-left: auto; /* ul zentrieren */
-        margin-right: auto;
-        padding-left: 20px; /* Einzug für Aufzählungszeichen */
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    #about ul li {
-        margin-bottom: 5px; /* Abstand zwischen Listenelementen */
-    }
-    .slogan-text { /* Slogan am Ende des Abschnitts "Über mich" */
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700; /* Fett */
-        text-align: center; /* Zentriert */
-        font-size: 1.3em;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        line-height: 1.4;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    /* Auf mobilen Bildschirmen: Links und Logo in einer Spalte zentriert */
+    @media (max-width: 991.98px) {
+      .navbar-collapse { /* Bootstrap fügt die Klasse .show hinzu, um es sichtbar zu machen */
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar-collapse .navbar-nav {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0 !important;
+      }
+      .navbar-collapse .navbar-logo-wrapper {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+      .navbar-collapse .navbar-logo {
+        height: 108px; /* Verdoppelt */
+        width: 90px; /* Verdoppelt */
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    /* Stil für den Abschnitt "Über mich" */
+    #about .container {
+        text-align: center;
+    }
+    #about h2 {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+        /* ДОБАВЛЕНО/ИЗМЕНЕНО: Убираем верхний отступ, чтобы h2 поднялся вверх */
+        margin-top: 0; 
+    }
+    #about p {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    /* Spezifischer Stil für Listen im Abschnitt "Über mich" für Qualifikationen */
+    #about ul {
+        font-family: 'Montserrat', sans-serif;
+        list-style-type: disc; /* Aufzählungszeichen */
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto; /* ul zentrieren */
+        margin-right: auto;
+        padding-left: 20px; /* Einzug für Aufzählungszeichen */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #about ul li {
+        margin-bottom: 5px; /* Abstand zwischen Listenelementen */
+    }
+    .slogan-text { /* Slogan am Ende des Abschnitts "Über mich" */
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700; /* Fett */
+        text-align: center; /* Zentriert */
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        line-height: 1.4;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    /* Stil für den Abschnitt "Preisliste" */
-    #preisliste h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .price-note {
-        text-align: center;
-        margin-bottom: 1rem;
-        font-family: 'Montserrat', sans-serif;
-    }
-    .extra-bold-italic {
-        font-weight: 900;
-        font-style: italic;
-    }
-    #preisliste table {
-      width: 100%;
-      max-width: 600px; /* Begrenzt die Tabellenbreite für bessere Lesbarkeit */
-      margin: 0 auto; /* Tabelle zentrieren */
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-      font-family: 'Montserrat', sans-serif;
-    }
-    #preisliste th, #preisliste td {
-      padding: 0.75rem;
-      border: 1px solid #dee2e6;
-      text-align: left;
-    }
-    #preisliste th {
-      background-color: #e9ecef;
-      font-weight: bold;
-    }
-    #preisliste .price-list-footer {
-      text-align: right;
-      max-width: 600px;
-      margin: 1rem auto 0 auto;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9em;
-      color: #555;
-    }
+    /* Stil für den Abschnitt "Preisliste" */
+    #preisliste h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .price-note {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .extra-bold-italic {
+        font-weight: 900;
+        font-style: italic;
+    }
+    #preisliste table {
+      width: 100%;
+      max-width: 600px; /* Begrenzt die Tabellenbreite für bessere Lesbarkeit */
+      margin: 0 auto; /* Tabelle zentrieren */
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    #preisliste th, #preisliste td {
+      padding: 0.75rem;
+      border: 1px solid #dee2e6;
+      text-align: left;
+    }
+    #preisliste th {
+      background-color: #e9ecef;
+      font-weight: bold;
+    }
+    #preisliste .price-list-footer {
+      text-align: right;
+      max-width: 600px;
+      margin: 1rem auto 0 auto;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9em;
+      color: #555;
+    }
 
-    /* Stil für den Abschnitt "Impressum" */
-    #impressum {
-        background-color: #f8f9fa; /* Leichter Hintergrund zur Hervorhebung */
-    }
-    #impressum .container {
-        max-width: 800px; /* Begrenzte Breite für Lesbarkeit */
-    }
-    #impressum h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    #impressum p {
-        font-family: 'Montserrat', sans-serif;
-        line-height: 1.6;
-        margin-bottom: 0.5rem;
-    }
-    #impressum strong {
-        font-weight: 700;
-    }
-    /* Stil für das Cookie-Zustimmungs-Modal (optional, für zusätzlichen Abstand/Ausrichtung) */
-    .cookie-modal-footer {
-        justify-content: center;
-        border-top: none; /* Entfernt die obere Linie im Modal-Footer */
-    }
-  </style>
+    /* Stil für den Abschnitt "Impressum" */
+    #impressum {
+        background-color: #f8f9fa; /* Leichter Hintergrund zur Hervorhebung */
+    }
+    #impressum .container {
+        max-width: 800px; /* Begrenzte Breite für Lesbarkeit */
+    }
+    #impressum h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    #impressum p {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+    #impressum strong {
+        font-weight: 700;
+    }
+    /* Stil für das Cookie-Zustimmungs-Modal (optional, für zusätzlichen Abstand/Ausrichtung) */
+    .cookie-modal-footer {
+        justify-content: center;
+        border-top: none; /* Entfernt die obere Linie im Modal-Footer */
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mobile Physiotherapie</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">Über mich</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services" data-bs-toggle="collapse" data-bs-target="#navbarNav">Leistungen</a></li>
-          <li class="nav-item"><a class="nav-link" href="#preisliste" data-bs-toggle="collapse" data-bs-target="#navbarNav">Preisliste</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact-info" data-bs-toggle="collapse" data-bs-target="#navbarNav">Kontakt</a></li>
-        </ul>
-        <div class="navbar-logo-wrapper">
-            <a href="#" class="nav-link p-0">
-                <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/LOGO.png" alt="Ihr Logo" class="navbar-logo">
-            </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mobile Physiotherapie</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">Über mich</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-bs-toggle="collapse" data-bs-target="#navbarNav">Leistungen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#preisliste" data-bs-toggle="collapse" data-bs-target="#navbarNav">Preisliste</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-info" data-bs-toggle="collapse" data-bs-target="#navbarNav">Kontakt</a></li>
+        </ul>
+        <div class="navbar-logo-wrapper">
+            <a href="#" class="nav-link p-0">
+                <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/LOGO.png" alt="Logo Mobile Physiotherapie Hamburg" class="navbar-logo">
+            </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  <header class="hero text-center">
-    <div class="container">
-      <h1 class="display-4">Mobile Physiotherapie bei Ihnen zu Hause</h1>
-      <p class="lead">Professionell · Individuell<br>Mit Herz</p>
-	  <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
-    </div>
-  </header>
+  <header class="hero text-center">
+    <div class="container">
+            <h1 class="display-4">Mobile Physiotherapie in Hamburg direkt bei Ihnen zu Hause</h1>
+      <p class="lead">Professionell · Individuell<br>Mit Herz</p>
+	  <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Jetzt Termin vereinbaren</a>
+    </div>
+  </header>
 
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <p>Mein Name ist Elias Dobrowolski – ich bin staatlich anerkannter Physiotherapeut, ausgebildet an einer medizinischen Fachschule in Hamburg. Mit Leidenschaft und Präzision begleite ich Menschen auf ihrem Weg zur Gesundheit und Leistungsfähigkeit – individuell, mobil und auf höchstem Niveau.</p>
+  <section id="about" class="py-5">
+    <div class="container text-center">
+            <p>Mein Name ist Elias Dobrowolski – ich bin staatlich anerkannter Physiotherapeut in Hamburg. Mit Leidenschaft und Präzision begleite ich Menschen auf ihrem Weg zur Gesundheit und Leistungsfähigkeit, spezialisiert auf mobile Physiotherapie direkt bei Ihnen zu Hause oder im Büro. Ich biete individuelle Behandlungen auf höchstem Niveau.</p>
 
-      <p>Ich verfüge über folgende Fachqualifikationen:</p>
-      <ul>
-        <li>Physiotherapie</li>
-        <li>Medizinische Massagen</li>
-        <li>Manuelle Lymphdrainage</li>
-        <li>Manuelle Therapie mit osteopathischen Techniken</li>
-      </ul>
+      <p>Ich verfüge über folgende Fachqualifikationen:</p>
+      <ul>
+        <li>Physiotherapie</li>
+        <li>Medizinische Massagen</li>
+        <li>Manuelle Lymphdrainage</li>
+        <li>Manuelle Therapie mit osteopathischen Techniken</li>
+      </ul>
 
-      <p>Neben meiner therapeutischen Kompetenz bringe ich wertvolle Erfahrungen aus dem Leistungssport mit. Als ehemaliger Wettkämpfer im Dreikampf und in der Ringerdisziplin weiß ich aus eigener Erfahrung, was es bedeutet, an körperliche Grenzen zu stoßen – und sie zu überwinden. Dieses Verständnis fließt in jede Behandlung mit ein – ob zur Rehabilitation, Leistungssteigerung oder nachhaltigen Schmerzfreiheit.</p>
+      <p>Neben meiner therapeutischen Kompetenz bringe ich wertvolle Erfahrungen aus dem Leistungssport mit. Als ehemaliger Wettkämpfer im Dreikampf und in der Ringerdisziplin weiß ich aus eigener Erfahrung, was es bedeutet, an körperliche Grenzen zu stoßen – und sie zu überwinden. Dieses Verständnis fließt in jede Behandlung mit ein – ob zur Rehabilitation, Leistungssteigerung oder nachhaltigen Schmerzfreiheit.</p>
 
-      <p>Ich arbeite exklusiv mit Privatpatienten und Selbstzahlern. Eine Zusammenarbeit mit den gesetzlichen Krankenkassen ist für die Zukunft geplant – darüber werde ich rechtzeitig informieren.</p>
+      <p>Ich arbeite exklusiv mit Privatpatienten und Selbstzahlern. Eine Zusammenarbeit mit den gesetzlichen Krankenkassen ist für die Zukunft geplant – darüber werde ich rechtzeitig informieren.</p>
 
-      <p>Als freiberuflicher Therapeut biete ich mobile Physiotherapie in vertrauter Umgebung – direkt bei Ihnen zuhause oder im Büro. Sie profitieren von flexiblen Terminen, persönlicher Betreuung und fundiertem Know-how.</p>
+      <p>Als freiberuflicher Therapeut biete ich mobile Physiotherapie in vertrauter Umgebung – direkt bei Ihnen zuhause oder im Büro. Sie profitieren von flexiblen Terminen, persönlicher Betreuung und fundiertem Know-how.</p>
 
-      <p class="slogan-text"><strong>Ich freue mich darauf, Sie persönlich kennenzulernen. Investieren Sie in Ihre Gesundheit – individuell, nachhaltig, kompetent.</strong></p>
-    </div>
-  </section>
+      <p class="slogan-text"><strong>Ich freue mich darauf, Sie persönlich kennenzulernen. Investieren Sie in Ihre Gesundheit – individuell, nachhaltig, kompetent.</strong></p>
+    </div>
+  </section>
 
-  <section id="services" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Leistungen</h2>
-      <div class="row text-center">
-        <div class="col-md-3 mb-3">
-          <h5>Manuelle Therapie</h5>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h5>Lymphdrainage</h5>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h5>Medizinische Massage</h5>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h5>Hausbesuche</h5>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h5>Private Leistungen</h5>
-        </div>
-      </div>
-       <div class="text-center">
-        <img src="https://cdn.pixabay.com/photo/2017/01/25/15/44/wellness-2002452_1280.jpg" alt="" class="massage-img">
-      </div>
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Leistungen</h2>
+      <div class="row text-center">
+        <div class="col-md-3 mb-3">
+          <h5>Manuelle Therapie</h5>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Lymphdrainage</h5>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Medizinische Massage</h5>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Hausbesuche</h5>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Private Leistungen</h5>
+        </div>
+      </div>
+       <div class="text-center">
+        <img src="https://cdn.pixabay.com/photo/2017/01/25/15/44/wellness-2002452_1280.jpg" alt="Medizinische Massage und Wellness" class="massage-img">
+      </div>
 	 </div>
-  </section>
+  </section>
 
-  <section id="preisliste" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Preisliste – Mobile Physiotherapie</h2>
-      <p class="price-note">*** <span class="extra-bold-italic">nur für Privatpatienten & Selbstzahler</span> ***</p>
-      <p class="price-note">Behandlungsdauer: jeweils 60 Minuten</p>
+  <section id="preisliste" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Preisliste – Mobile Physiotherapie</h2>
+      <p class="price-note">*** <span class="extra-bold-italic">nur für Privatpatienten & Selbstzahler</span> ***</p>
+      <p class="price-note">Behandlungsdauer: jeweils 60 Minuten</p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Leistung</th>
-            <th>Preis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Physiotherapeutische Behandlung (klassisch)</td>
-            <td>85 €</td>
-          </tr>
-          <tr>
-            <td>Manuelle Therapie mit osteopathischen Techniken</td>
-            <td>90 €</td>
-          </tr>
-          <tr>
-            <td>Medizinische Massage (tiefenwirksam, individuell)</td>
-            <td>80 €</td>
-          </tr>
-          <tr>
-            <td>Sportphysiotherapie / Regeneration / Leistungsaufbau</td>
-            <td>95 €</td>
-          </tr>
-          <tr>
-            <td>Erstuntersuchung mit Anamnese & Befundaufnahme</td>
-            <td>90 €</td>
-          </tr>
-          <tr>
-            <td>Leistungsdiagnostik (für Sportler & Athleten)</td>
-            <td>110 €</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="price-list-footer">* inkl. Anfahrt innerhalb Hamburg</p>
-    </div>
-  </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Leistung</th>
+            <th>Preis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Physiotherapeutische Behandlung (klassisch)</td>
+            <td>85 €</td>
+          </tr>
+          <tr>
+            <td>Manuelle Therapie mit osteopathischen Techniken</td>
+            <td>90 €</td>
+          </tr>
+          <tr>
+            <td>Medizinische Massage (tiefenwirksam, individuell)</td>
+            <td>80 €</td>
+          </tr>
+          <tr>
+            <td>Sportphysiotherapie / Regeneration / Leistungsaufbau</td>
+            <td>95 €</td>
+          </tr>
+          <tr>
+            <td>Erstuntersuchung mit Anamnese & Befundaufnahme</td>
+            <td>90 €</td>
+          </tr>
+          <tr>
+            <td>Leistungsdiagnostik (für Sportler & Athleten)</td>
+            <td>110 €</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="price-list-footer">* inkl. Anfahrt innerhalb Hamburg</p>
+    </div>
+  </section>
 
-  <section id="contact-info" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Kontakt</h2>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>Telefon: <a href="tel:+491634838370" class="contact-link"><i class="fas fa-phone-alt contact-icon"></i>+49 1634838370</a></p>
-          <p><a href="https://wa.me/491634838370" target="_blank" class="contact-link"><i class="fab fa-whatsapp whatsapp-icon"></i>WhatsApp</a></p>
-          <p>E-Mail: <a href="mailto:e.dobrowolski.flexi-physio@web.de" class="contact-link"><i class="fas fa-envelope contact-icon"></i>e.dobrowolski.flexi-physio@web.de</a></p>
-          <p>Adresse: Krontaubenstieg 11a, 22149 Hamburg</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="contact-info" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Kontakt</h2>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Telefon: <a href="tel:+491634838370" class="contact-link"><i class="fas fa-phone-alt contact-icon"></i>+49 1634838370</a></p>
+          <p><a href="https://wa.me/491634838370" target="_blank" class="contact-link"><i class="fab fa-whatsapp whatsapp-icon"></i>WhatsApp</a></p>
+          <p>E-Mail: <a href="mailto:e.dobrowolski.flexi-physio@web.de" class="contact-link"><i class="fas fa-envelope contact-icon"></i>e.dobrowolski.flexi-physio@web.de</a></p>
+          <p>Adresse: Krontaubenstieg 11a, 22149 Hamburg</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="impressum" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Impressum</h2>
-      <p><strong>Diensteanbieter:</strong></p>
-      <p>Elias Dobrowolski<br>
-         Krontaubenstieg 11a<br>
-         22149 Hamburg</p>
+    <section id="datenschutz" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Datenschutzerklärung</h2>
+      <p>Wir freuen uns über Ihr Interesse an unserer Website. Der Schutz Ihrer Privatsphäre ist für uns sehr wichtig. Nachstehend informieren wir Sie ausführlich über den Umgang mit Ihren Daten.</p>
+      
+      <h3>Datenerfassung auf dieser Website</h3>
+      <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+      <p>Elias Dobrowolski speichert keine personenbezogenen Daten von Besuchern, außer in den Fällen, in denen Sie uns diese freiwillig zur Kontaktaufnahme über E-Mail, Telefon oder WhatsApp mitteilen. Wir verwenden keine Analyse-Tools, wie Google Analytics, und es werden keine Tracking-Cookies gesetzt.</p>
 
-      <p><strong>Kontakt:</strong></p>
-      <p>Telefon: +49 1634838370<br>
-         E-Mail: e.dobrowolski.flexi-physio@web.de</p>
+      <h3>Cookies</h3>
+      <p>Diese Website verwendet nur technisch notwendige Cookies, die für die ordnungsgemäße Funktion der Website unerlässlich sind. Diese Cookies speichern lediglich Ihre Zustimmung zum Cookie-Hinweis, um zu verhindern, dass dieser bei jedem Besuch erneut angezeigt wird. Diese Cookies sind temporär und enthalten keine persönlichen Daten.</p>
+    </div>
+  </section>
 
-      <p><strong>Berufsbezeichnung:</strong></p>
-      <p>Staatlich anerkannter Physiotherapeut<br>
-         Verliehen in der Bundesrepublik Deutschland</p>
-      
-      <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
-      <p>Gesundheitsamt Hamburg</p>
+  <section id="impressum" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Impressum</h2>
+      <p><strong>Diensteanbieter:</strong></p>
+      <p>Elias Dobrowolski<br>
+         Krontaubenstieg 11a<br>
+         22149 Hamburg</p>
 
-      <p><strong>Berufsrechtliche Regelungen:</strong></p>
-      <p>Gesetz über die Berufe in der Physiotherapie (Masseur- und Physiotherapeutengesetz - MPhG)<br>
+      <p><strong>Kontakt:</strong></p>
+      <p>Telefon: <a href="tel:+491634838370" class="contact-link">+49 1634838370</a><br>
+         E-Mail: <a href="mailto:e.dobrowolski.flexi-physio@web.de" class="contact-link">e.dobrowolski.flexi-physio@web.de</a></p>
 
-      <p><strong>Haftungsausschluss:</strong></p>
-      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers.</p>
-    </div>
-  </section>
+      <p><strong>Berufsbezeichnung:</strong></p>
+      <p>Staatlich anerkannter Physiotherapeut<br>
+         Verliehen in der Bundesrepublik Deutschland</p>
+      
+      <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
+      <p>Gesundheitsamt Hamburg</p>
 
-  <footer class="text-center py-4 bg-light">
-    <small>&copy; 2025 Elias Dobrowolski · Mobile Physiotherapie | <a href="#impressum">Impressum</a></small>
-  </footer>
+      <p><strong>Berufsrechtliche Regelungen:</strong></p>
+      <p>Gesetz über die Berufe in der Physiotherapie (Masseur- und Physiotherapeutengesetz - MPhG)<br>
 
-  <div class="modal fade" id="cookieConsentModal" tabindex="-1" aria-labelledby="cookieConsentModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cookieConsentModalLabel">Cookie-Zustimmung</h5>
-        </div>
-        <div class="modal-body">
-          <p>Diese Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und bestimmte Funktionen bereitzustellen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer <a href="#datenschutz" target="_blank">Datenschutzerklärung</a> zu.</p>
-          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion der Website zu gewährleisten.</p>
-        </div>
-        <div class="modal-footer cookie-modal-footer">
-          <button type="button" class="btn btn-primary" id="acceptCookies">Zustimmen</button>
-        </div>
-      </div>
-    </div>
-  </div>
+      <p><strong>Haftungsausschluss:</strong></p>
+      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers.</p>
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const cookieConsentModal = new bootstrap.Modal(document.getElementById('cookieConsentModal'));
-      const acceptCookiesBtn = document.getElementById('acceptCookies');
-      
-      // Überprüfen, ob die Cookie-Zustimmung bereits erteilt wurde
-      if (!localStorage.getItem('cookieConsentGiven')) {
-        cookieConsentModal.show(); // Zeigen Sie das Modal an, wenn keine Zustimmung vorliegt
-      }
+  <footer class="text-center py-4 bg-light">
+    <small>&copy; 2025 Elias Dobrowolski · Mobile Physiotherapie | <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutzerklärung</a></small>
+  </footer>
 
-      // Beim Klick auf "Zustimmen" die Zustimmung speichern und das Modal schließen
-      acceptCookiesBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsentGiven', 'true');
-        cookieConsentModal.hide();
-      });
+  <div class="modal fade" id="cookieConsentModal" tabindex="-1" aria-labelledby="cookieConsentModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cookieConsentModalLabel">Cookie-Zustimmung</h5>
+        </div>
+        <div class="modal-body">
+          <p>Diese Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und bestimmte Funktionen bereitzustellen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer <a href="#datenschutz">Datenschutzerklärung</a> zu.</p>
+          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion der Website zu gewährleisten.</p>
+        </div>
+        <div class="modal-footer cookie-modal-footer">
+          <button type="button" class="btn btn-primary" id="acceptCookies">Zustimmen</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      // Logik für sanftes Scrollen nach Klick auf Navigationslink
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-      const navbar = document.querySelector('.navbar'); // Den Navbar abrufen
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsentModal = new bootstrap.Modal(document.getElementById('cookieConsentModal'));
+      const acceptCookiesBtn = document.getElementById('acceptCookies');
+      
+      // Überprüfen, ob die Cookie-Zustimmung bereits erteilt wurde
+      if (!localStorage.getItem('cookieConsentGiven')) {
+        cookieConsentModal.show(); // Zeigen Sie das Modal an, wenn keine Zustimmung vorliegt
+      }
 
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-          // Überprüfen, ob der Link ein interner Anker ist
-          if (this.hash !== "") {
-            event.preventDefault(); // Standard-Sprungverhalten verhindern
+      // Beim Klick auf "Zustimmen" die Zustimmung speichern und das Modal schließen
+      acceptCookiesBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsentGiven', 'true');
+        cookieConsentModal.hide();
+      });
 
-            const targetId = this.hash;
-            const targetElement = document.querySelector(targetId);
+      // Logik für sanftes Scrollen nach Klick auf Navigationslink
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      const navbar = document.querySelector('.navbar'); // Den Navbar abrufen
 
-            if (targetElement) {
-              const navbarHeight = navbar.offsetHeight; // Höhe des Navbars erhalten
-              const targetPosition = targetElement.offsetTop - navbarHeight; // Zielposition abzüglich Navbar-Höhe
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          // Überprüfen, ob der Link ein interner Anker ist
+          if (this.hash !== "") {
+            event.preventDefault(); // Standard-Sprungverhalten verhindern
 
-              // Sanftes Scrollen zum Zielabschnitt mit Offset
-              window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-              });
+            const targetId = this.hash;
+            const targetElement = document.querySelector(targetId);
 
-              // Navigationsleiste manuell schließen, wenn sie geöffnet ist (auf mobilen Geräten)
-              const navbarCollapse = document.getElementById('navbarNav');
-              // Bootstrap Collapse Instanz abrufen
-              const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); 
+            if (targetElement) {
+              const navbarHeight = navbar.offsetHeight; // Höhe des Navbars erhalten
+              const targetPosition = targetElement.offsetTop - navbarHeight; // Zielposition abzüglich Navbar-Höhe
 
-              if (bsCollapse && navbarCollapse.classList.contains('show')) {
-                bsCollapse.hide(); // Navigationsleiste ausblenden
-              }
-            }
-          }
-        });
-      });
-    });
-  </script>
+              // Sanftes Scrollen zum Zielabschnitt mit Offset
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+
+              // Navigationsleiste manuell schließen, wenn sie geöffnet ist (auf mobilen Geräten)
+              const navbarCollapse = document.getElementById('navbarNav');
+              // Bootstrap Collapse Instanz abrufen
+              const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); 
+
+              if (bsCollapse && navbarCollapse.classList.contains('show')) {
+                bsCollapse.hide(); // Navigationsleiste ausblenden
+              }
+            }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
