@@ -27,42 +27,52 @@
     body {
       background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
+
+    /* ИЗМЕНЕНО: Новая структура под полноценное вертикальное фото без обрезания */
+    .hero-section {
+      background-color: #0c2340; /* Глубокий благородный темно-синий цвет для контраста с фото */
+      overflow: hidden;
+    }
     
-    /* ИЗМЕНЕНО: Адаптация под вертикальную фотографию */
-    .hero {
-      background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Main.jpeg') center/cover no-repeat;
-      min-height: 75vh;
+    .hero-text-container {
+      padding: 4rem 2rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    
-    .hero h1, .hero p { 
-      font-family: 'Montserrat', sans-serif; 
-      color: white; 
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85), 0 0 10px rgba(0, 0, 0, 0.5); /* Усилена тень для лучшей читаемости на вертикальном фото */
-    }
-    .hero h1 {
-        font-weight: 700; 
-    }
-    .hero p {
-        font-weight: 400; 
     }
 
-    /* ДОБАВЛЕНО: Специфичное позиционирование вертикального фона для больших экранов */
-    @media (min-width: 992px) {
-      .hero {
-        background-position: right center; /* Смещаем акцент фото вправо */
-        align-items: flex-start; /* Текст уходит влево */
-        text-align: left;
-        padding-left: 10%; /* Отступ для контента слева */
+    .hero-image-container {
+      padding: 0;
+      line-height: 0;
+    }
+
+    .hero-vertical-img {
+      width: 100%;
+      height: auto;
+      max-height: 75vh; /* Ограничиваем высоту на больших экранах, чтобы не скроллить */
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-section h1, .hero-section p { 
+      font-family: 'Montserrat', sans-serif; 
+      color: white; 
+    }
+    .hero-section h1 {
+      font-weight: 700; 
+      margin-bottom: 1.5rem;
+    }
+    .hero-section p {
+      font-weight: 400; 
+    }
+
+    @media (max-width: 767.98px) {
+      .hero-text-container {
+        padding: 3rem 1.5rem;
+        text-align: center;
       }
-      .hero .container {
-        max-width: 600px;
-        margin-left: 0;
+      .hero-vertical-img {
+        max-height: 60vh; /* Чуть уменьшаем высоту картинки на телефонах */
       }
     }
 
@@ -72,7 +82,13 @@
     }
     .cta-button {
       margin-top: 2rem;
+      align-self: flex-start; /* На десктопе кнопка слева */
       transition: transform 0.3s ease-in-out;
+    }
+    @media (max-width: 767.98px) {
+      .cta-button {
+        align-self: center; /* На мобильном кнопка по центру */
+      }
     }
     .cta-button:hover {
       transform: scale(1.05);
@@ -311,11 +327,18 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container">
-      <h1 class="display-4">Mobile Physiotherapie bei Ihnen zu Hause</h1>
-      <p class="lead">Professionell · Individuell<br>Mit Herz</p>
-      <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
+  <header class="hero-section">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-md-6 hero-text-container">
+          <h1 class="display-4">Mobile Physiotherapie bei Ihnen zu Hause</h1>
+          <p class="lead">Professionell · Individuell<br>Mit Herz</p>
+          <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
+        </div>
+        <div class="col-md-6 hero-image-container">
+          <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Main.jpeg" alt="Elias Dobrowolski - Mobile Physiotherapie" class="hero-vertical-img">
+        </div>
+      </div>
     </div>
   </header>
 
@@ -438,7 +461,7 @@
          E-Mail: e.dobrowolski.flexi-physio@web.de</p>
 
       <p><strong>Berufsbezeichnung:</strong></p>
-      <p>Staatlich anнерканнтер Physiotherapeut<br>
+      <p>Staatlich annerkanнтер Physiotherapeut<br>
          Verliehen in der Bundesrepublik Deutschland</p>
       
       <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
@@ -448,7 +471,7 @@
       <p>Gesetz über die Berufe in der Physiotherapie (Masseur- und Physiotherapeutengesetz - MPhG)<br>
 
       <p><strong>Haftungsausschluss:</strong></p>
-      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers.</p>
+      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte della Website erfolgt auf eigene Gefahr des Nutzers.</p>
     </div>
   </section>
 
@@ -464,7 +487,7 @@
         </div>
         <div class="modal-body">
           <p>Diese Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und bestimmte Funktionen bereitzustellen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer <a href="#datenschutz" target="_blank">Datenschutzerklärung</a> zu.</p>
-          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion der Website zu gewährleisten.</p>
+          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion della Website zu gewährleisten.</p>
         </div>
         <div class="modal-footer cookie-modal-footer">
           <button type="button" class="btn btn-primary" id="acceptCookies">Zustimmen</button>
