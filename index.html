@@ -11,24 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Der scroll-padding-top wird nun über JavaScript dynamisch gesteuert, um die Genauigkeit zu verbessern. */
-    /* Basis-scroll-padding-top für mobile Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
-    /* html {
-        scroll-padding-top: 180px; 
-    } */
-
-    /* scroll-padding-top Anpassung für Desktop-Geräte (Navigationsleistenhöhe + interner Abschnittsabstand + kleiner Puffer) */
-    /* @media (min-width: 992px) {
-        html {
-            scroll-padding-top: 260px; 
-        }
-    } */
-
     body {
       background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
 
-    /* ИЗМЕНЕНО: Настройки секции для полного отображения вертикального фото */
     .hero-section {
       background-color: #0c2340; /* Глубокий темно-синий цвет, который сливается с фоном фото */
       overflow: hidden;
@@ -47,11 +33,10 @@
       background-color: #0c2340;
     }
 
-    /* ИЗМЕНЕНО: Изменен тип масштабирования, чтобы фото влезало целиком */
     .hero-vertical-img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Теперь фото не обрезается, а подстраивается целиком */
+      object-fit: contain; /* Фото не обрезается, а подстраивается целиком */
       object-position: right center;
     }
 
@@ -100,48 +85,42 @@
       border-radius: 10px;
       margin-top: 30px;
     }
-    /* Stil für die WhatsApp-Ikone, damit sie etwas größer ist und hervorsticht */
+    
+    /* WhatsApp */
     .whatsapp-icon {
-      font-size: 1.2em; /* Größe leicht erhöhen */
-      margin-right: 5px; /* Abstand rechts vom Text */
-      color: #25D366; /* WhatsApp-Farbe */
-    }
-    .contact-icon { /* Neuer Stil für Kontaktsymbole */
       font-size: 1.2em;
       margin-right: 5px;
-      color: #007bff; /* Farbe für Symbole */
+      color: #25D366;
     }
-    /* Stil für Links, damit sie standardmäßig nicht unterstrichen sind */
+    .contact-icon {
+      font-size: 1.2em;
+      margin-right: 5px;
+      color: #007bff;
+    }
     .contact-link {
         text-decoration: none;
-        color: inherit; /* Textfarbe vom Eltern-Element erben */
+        color: inherit;
     }
     .contact-link:hover {
-        text-decoration: underline; /* Beim Hover unterstreichen */
+        text-decoration: underline;
     }
-    /* Standardstil .navbar-brand zurücksetzen - benutzerdefinierte Rahmenstile entfernt */
-    .navbar-brand {
-      /* Zuvor hinzugefügte Stile wie color: white !important; und text-shadow wurden entfernt */
-      /* Bootstrap dies verwalten lassen oder eigene Farbe ohne Rahmen definieren */
-    }
-    /* Stil für das Logo in der Navigationsleiste */
+    
+    /* Логотип в навигации */
     .navbar-logo {
-        height: 144px; /* Verdoppelt */
-        width: 120px; /* Verdoppelt */
+        height: 144px;
+        width: 120px;
         border: 4px solid #007bff;
         padding: 2px;
         object-fit: cover;
     }
 
-    /* Ändert navbar-collapse zum Umbrechen von Elementen */
-    /* 'display: flex;' hier entfernt, um Konflikte mit der Bootstrap-Logik für .collapse/.show zu vermeiden */
     .navbar-collapse { 
       flex-wrap: wrap;
       justify-content: flex-end;
       align-items: center;
     }
 
-    /* Auf großen Bildschirmen: Links rechts, Logo unten rechts */
+    /* На больших экранах: ссылки справа, логотип внизу справа */
     @media (min-width: 992px) {
         .navbar-collapse .navbar-nav {
             margin-left: auto !important;
@@ -160,9 +139,9 @@
         }
     }
 
-    /* Auf mobilen Bildschirmen: Links und Logo in einer Spalte zentriert */
+    /* На мобильных экранах: по центру */
     @media (max-width: 991.98px) {
-      .navbar-collapse { /* Bootstrap fügt die Klasse .show hinzu, um es sichtbar zu machen */
+      .navbar-collapse {
         flex-direction: column;
         align-items: center;
       }
@@ -177,14 +156,15 @@
         padding: 0;
       }
       .navbar-collapse .navbar-logo {
-        height: 108px; /* Verdoppelt */
-        width: 90px; /* Verdoppelt */
+        height: 108px;
+        width: 90px;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
       }
     }
-    /* Stil für den Abschnitt "Über mich" */
+    
+    /* Обо мне */
     #about .container {
         text-align: center;
     }
@@ -194,7 +174,6 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 800px;
-        /* ДОБАВЛЕНО/ИЗМЕНЕНО: Убираем верхний отступ, чтобы h2 поднялся вверх */
         margin-top: 0; 
     }
     #about p {
@@ -206,25 +185,24 @@
         margin-right: auto;
         margin-bottom: 1em;
     }
-    /* Spezifischer Stil für Listen im Abschnitt "Über mich" für Qualifikationen */
     #about ul {
         font-family: 'Montserrat', sans-serif;
-        list-style-type: disc; /* Aufzählungszeichen */
+        list-style-type: disc;
         text-align: left;
         max-width: 800px;
-        margin-left: auto; /* ul zentrieren */
+        margin-left: auto;
         margin-right: auto;
-        padding-left: 20px; /* Einzug für Aufzählungszeichen */
+        padding-left: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
     #about ul li {
-        margin-bottom: 5px; /* Abstand zwischen Listenelementen */
+        margin-bottom: 5px;
     }
-    .slogan-text { /* Slogan am Ende des Abschnitts "Über mich" */
+    .slogan-text {
         font-family: 'Montserrat', sans-serif;
-        font-weight: 700; /* Fett */
-        text-align: center; /* Zentriert */
+        font-weight: 700;
+        text-align: center;
         font-size: 1.3em;
         margin-top: 25px;
         margin-bottom: 25px;
@@ -234,7 +212,7 @@
         margin-right: auto;
     }
 
-    /* Stil für den Abschnitt "Preisliste" */
+    /* Прейскурант */
     #preisliste h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -252,8 +230,8 @@
     }
     #preisliste table {
       width: 100%;
-      max-width: 600px; /* Begrenzt die Tabellenbreite für bessere Lesbarkeit */
-      margin: 0 auto; /* Tabelle zentrieren */
+      max-width: 600px;
+      margin: 0 auto;
       border-collapse: collapse;
       margin-top: 1.5rem;
       font-family: 'Montserrat', sans-serif;
@@ -276,12 +254,12 @@
       color: #555;
     }
 
-    /* Stil für den Abschnitt "Impressum" */
+    /* Контакты и правовая информация */
     #impressum {
-        background-color: #f8f9fa; /* Leichter Hintergrund zur Hervorhebung */
+        background-color: #f8f9fa;
     }
     #impressum .container {
-        max-width: 800px; /* Begrenzte Breite für Lesbarkeit */
+        max-width: 800px;
     }
     #impressum h2 {
         font-family: 'Montserrat', sans-serif;
@@ -297,10 +275,9 @@
     #impressum strong {
         font-weight: 700;
     }
-    /* Stil für das Cookie-Zustimmungs-Modal (optional, für zusätzlichen Abstand/Ausrichtung) */
     .cookie-modal-footer {
         justify-content: center;
-        border-top: none; /* Entfernt die obere Linie im Modal-Footer */
+        border-top: none;
     }
   </style>
 </head>
@@ -338,7 +315,7 @@
           <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
         </div>
         <div class="col-md-6 hero-image-container d-flex align-items-center justify-content-center">
-          <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Main.jpeg" alt="Elias Dobrowolski - Mobile Physiotherapie" class="hero-vertical-img">
+          <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Mainn.jpeg" alt="Elias Dobrowolski - Mobile Physiotherapie" class="hero-vertical-img">
         </div>
       </div>
     </div>
@@ -463,17 +440,17 @@
          E-Mail: e.dobrowolski.flexi-physio@web.de</p>
 
       <p><strong>Berufsbezeichnung:</strong></p>
-      <p>Staatlich annerkanнтер Physiotherapeut<br>
+      <p>Staatlich anerkannter Physiotherapeut<br>
          Verliehen in der Bundesrepublik Deutschland</p>
       
       <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
       <p>Gesundheitsamt Hamburg</p>
 
       <p><strong>Berufsrechtliche Regelungen:</strong></p>
-      <p>Gesetz über die Berufe in der Physiotherapie (Masseur- und Physiotherapeutengesetz - MPhG)<br>
+      <p>Gesetz über die Berufe in der Physiotherapie (Masseur- und Physiotherapeutengesetz - MPhG)</p>
 
       <p><strong>Haftungsausschluss:</strong></p>
-      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte della Website erfolgt auf eigene Gefahr des Nutzers.</p>
+      <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Elias Dobrowolski übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der Website erfolgt auf eigene Gefahr des Nutzers.</p>
     </div>
   </section>
 
@@ -489,7 +466,7 @@
         </div>
         <div class="modal-body">
           <p>Diese Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und bestimmte Funktionen bereitzustellen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer <a href="#datenschutz" target="_blank">Datenschutzerklärung</a> zu.</p>
-          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen 👀 Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion della Website zu gewährleisten.</p>
+          <p>Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion der Website zu gewährleisten.</p>
         </div>
         <div class="modal-footer cookie-modal-footer">
           <button type="button" class="btn btn-primary" id="acceptCookies">Zustimmen</button>
@@ -504,47 +481,40 @@
       const cookieConsentModal = new bootstrap.Modal(document.getElementById('cookieConsentModal'));
       const acceptCookiesBtn = document.getElementById('acceptCookies');
       
-      // Überprüfen, ob die Cookie-Zustimmung bereits erteilt wurde
       if (!localStorage.getItem('cookieConsentGiven')) {
-        cookieConsentModal.show(); // Zeigen Sie das Modal an, wenn keine Zustimmung vorliegt
+        cookieConsentModal.show();
       }
 
-      // Beim Klick auf "Zustimmen" die Zustimmung speichern und das Modal schließen
       acceptCookiesBtn.addEventListener('click', function() {
         localStorage.setItem('cookieConsentGiven', 'true');
         cookieConsentModal.hide();
       });
 
-      // Logik für sanftes Scrollen nach Klick auf Navigationslink
       const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-      const navbar = document.querySelector('.navbar'); // Den Navbar abrufen
+      const navbar = document.querySelector('.navbar');
 
       navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-          // Überprüfen, ob der Link ein interner Anker ist
           if (this.hash !== "") {
-            event.preventDefault(); // Standard-Sprungverhalten verhindern
+            event.preventDefault();
 
             const targetId = this.hash;
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-              const navbarHeight = navbar.offsetHeight; // Höhe des Navbars erhalten
-              const targetPosition = targetElement.offsetTop - navbarHeight; // Zielposition abzüglich Navbar-Höhe
+              const navbarHeight = navbar.offsetHeight;
+              const targetPosition = targetElement.offsetTop - navbarHeight;
 
-              // Sanftes Scrollen zum Zielabschnitt mit Offset
               window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
               });
 
-              // Navigationsleiste manuell schließen, wenn sie geöffnet ist (auf mobilen Geräten)
               const navbarCollapse = document.getElementById('navbarNav');
-              // Bootstrap Collapse Instanz abrufen
               const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); 
 
               if (bsCollapse && navbarCollapse.classList.contains('show')) {
-                bsCollapse.hide(); // Navigationsleiste ausblenden
+                bsCollapse.hide();
               }
             }
           }
