@@ -27,25 +27,43 @@
     body {
       background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
+    
+    /* ИЗМЕНЕНО: Адаптация под вертикальную фотографию */
     .hero {
-      background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Image2.jpeg') center/cover no-repeat;
-      height: 70vh;
+      background: url('https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Main.jpeg') center/cover no-repeat;
+      min-height: 75vh;
       display: flex;
-      flex-direction: column; /* Ändern in Spalte zur Zentrierung des Inhalts */
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center; /* Text zentrieren */
+      text-align: center;
+      padding: 3rem 1rem;
     }
-    .hero h1, .hero p { /* Stile auf h1 und p innerhalb von hero anwenden */
-      font-family: 'Montserrat', sans-serif; /* Montserrat-Schriftart anwenden */
-      color: white; /* Textfarbe weiß */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Weicher schwarzer Schatten für Volumen */
+    
+    .hero h1, .hero p { 
+      font-family: 'Montserrat', sans-serif; 
+      color: white; 
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85), 0 0 10px rgba(0, 0, 0, 0.5); /* Усилена тень для лучшей читаемости на вертикальном фото */
     }
     .hero h1 {
-        font-weight: 700; /* Fett für die Überschrift */
+        font-weight: 700; 
     }
     .hero p {
-        font-weight: 400; /* Normal für den Absatz */
+        font-weight: 400; 
+    }
+
+    /* ДОБАВЛЕНО: Специфичное позиционирование вертикального фона для больших экранов */
+    @media (min-width: 992px) {
+      .hero {
+        background-position: right center; /* Смещаем акцент фото вправо */
+        align-items: flex-start; /* Текст уходит влево */
+        text-align: left;
+        padding-left: 10%; /* Отступ для контента слева */
+      }
+      .hero .container {
+        max-width: 600px;
+        margin-left: 0;
+      }
     }
 
     .profile-img {
@@ -293,11 +311,11 @@
     </div>
   </nav>
 
-  <header class="hero text-center">
+  <header class="hero">
     <div class="container">
       <h1 class="display-4">Mobile Physiotherapie bei Ihnen zu Hause</h1>
       <p class="lead">Professionell · Individuell<br>Mit Herz</p>
-	  <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
+      <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
     </div>
   </header>
 
@@ -387,10 +405,6 @@
             <td>Leistungsdiagnostik (für Sportler & Athleten)</td>
             <td>70 €</td>
           </tr>
-		  <tr>
-            <td>Manuelle Lymphdrainage</td>
-            <td>75 €</td>
-          </tr>
         </tbody>
       </table>
       <p class="price-list-footer">* inkl. Anfahrt innerhalb Hamburg</p>
@@ -424,7 +438,7 @@
          E-Mail: e.dobrowolski.flexi-physio@web.de</p>
 
       <p><strong>Berufsbezeichnung:</strong></p>
-      <p>Staatlich anerkannter Physiotherapeut<br>
+      <p>Staatlich anнерканнтер Physiotherapeut<br>
          Verliehen in der Bundesrepublik Deutschland</p>
       
       <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
@@ -515,7 +529,3 @@
   </script>
 </body>
 </html>
-
-
-
-
