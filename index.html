@@ -28,14 +28,14 @@
       background-color: #f0f8ff; /* Sehr hellblauer Hintergrund (AliceBlue) */
     }
 
-    /* ИЗМЕНЕНО: Новая структура под полноценное вертикальное фото без обрезания */
+    /* ИЗМЕНЕНО: Настройки секции для полного отображения вертикального фото */
     .hero-section {
-      background-color: #0c2340; /* Глубокий благородный темно-синий цвет для контраста с фото */
+      background-color: #0c2340; /* Глубокий темно-синий цвет, который сливается с фоном фото */
       overflow: hidden;
     }
     
     .hero-text-container {
-      padding: 4rem 2rem;
+      padding: 5rem 3rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,14 +44,15 @@
     .hero-image-container {
       padding: 0;
       line-height: 0;
+      background-color: #0c2340;
     }
 
+    /* ИЗМЕНЕНО: Изменен тип масштабирования, чтобы фото влезало целиком */
     .hero-vertical-img {
       width: 100%;
-      height: auto;
-      max-height: 75vh; /* Ограничиваем высоту на больших экранах, чтобы не скроллить */
-      object-fit: cover;
-      object-position: center;
+      height: 100%;
+      object-fit: contain; /* Теперь фото не обрезается, а подстраивается целиком */
+      object-position: right center;
     }
 
     .hero-section h1, .hero-section p { 
@@ -66,13 +67,14 @@
       font-weight: 400; 
     }
 
+    /* Адаптив под мобильные устройства */
     @media (max-width: 767.98px) {
       .hero-text-container {
         padding: 3rem 1.5rem;
         text-align: center;
       }
       .hero-vertical-img {
-        max-height: 60vh; /* Чуть уменьшаем высоту картинки на телефонах */
+        object-position: center;
       }
     }
 
@@ -329,13 +331,13 @@
 
   <header class="hero-section">
     <div class="container-fluid p-0">
-      <div class="row g-0">
+      <div class="row g-0 align-items-stretch">
         <div class="col-md-6 hero-text-container">
           <h1 class="display-4">Mobile Physiotherapie bei Ihnen zu Hause</h1>
           <p class="lead">Professionell · Individuell<br>Mit Herz</p>
           <a href="#contact-info" class="btn btn-primary btn-lg cta-button">Termin vereinbaren</a>
         </div>
-        <div class="col-md-6 hero-image-container">
+        <div class="col-md-6 hero-image-container d-flex align-items-center justify-content-center">
           <img src="https://raw.githubusercontent.com/AlexfromElmStreet/flexi-physio/main/Main.jpeg" alt="Elias Dobrowolski - Mobile Physiotherapie" class="hero-vertical-img">
         </div>
       </div>
@@ -487,7 +489,7 @@
         </div>
         <div class="modal-body">
           <p>Diese Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und bestimmte Funktionen bereitzustellen. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß unserer <a href="#datenschutz" target="_blank">Datenschutzerklärung</a> zu.</p>
-          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion della Website zu gewährleisten.</p>
+          <p>Wir verwenden keine analytischen oder Marketing-Cookies, die Ihre persönlichen 👀 Daten verfolgen würden. Wir verwenden nur technisch notwendige Cookies, um die ordnungsgemäße Funktion della Website zu gewährleisten.</p>
         </div>
         <div class="modal-footer cookie-modal-footer">
           <button type="button" class="btn btn-primary" id="acceptCookies">Zustimmen</button>
